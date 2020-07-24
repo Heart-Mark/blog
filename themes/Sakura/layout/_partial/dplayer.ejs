@@ -1,0 +1,44 @@
+<% if (theme.dplayer && theme.dplayer.enable){ %>
+  <div id="dplayer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.jsdelivr.net/gh/MoePlayer/DPlayer@master/dist/DPlayer.min.js"></script> 
+  <script>
+    const _list = JSON.parse('<%- JSON.stringify(theme.dplayer.playlist) %>');
+    const _link = `<%- theme.CDN.default %>/video/bg_video/有一种感情叫兄弟情深`
+    // console.log(_list,_list.Movie,`${_link}/pic.jpg`)
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        autoplay: '<%- theme.dplayer.autoplay %>',
+        theme: '<%- theme.dplayer.theme %>',
+        loop: '<%- theme.dplayer.loop %>',
+        lang: '<%- theme.dplayer.lang %>',
+        screenshot: '<%- theme.dplayer.screenshot %>',
+        hotkey: '<%- theme.dplayer.hotkey %>',
+        preload: '<%- theme.dplayer.preload %>',
+        logo: '<%- theme.dplayer.logo %>',
+        volume: '<%- theme.dplayer.volume %>',
+        mutex: '<%- theme.dplayer.mutex %>',
+        video: {
+          url: `${_link}/video.m3u8`,
+          // pic: `${_link}/pic.jpg`,
+          type: 'customHls',
+          customType: {
+            customHls: function (video, player) {
+                const hls = new Hls();
+                hls.loadSource(video.src);
+                hls.attachMedia(video);
+            },
+          },
+        },
+      });
+    $(document).on('pjax:start', function () {
+      console.log("dplayer","pjax")
+      if (window.dplayers) {
+          for (let i = 0; i < window.dplayers.length; i++) {
+              window.dplayers[i].destroy();
+          }
+          window.dplayers = [];
+      }
+    });
+  </script>
+<% } %>
