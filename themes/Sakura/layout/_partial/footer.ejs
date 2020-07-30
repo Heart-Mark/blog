@@ -31,6 +31,7 @@
 
 
 <!-- <script src="/js/tocbot.js"></script> -->
+<%- partial('_partial/video', null, {cache: !config.relative_link}) %>
 <script type="text/javascript" src="/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
@@ -46,14 +47,17 @@
 <script type="text/javascript">
 /* <![CDATA[ */
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-  var mov = "<%- theme.bg_movies.name %>".split(",")
+  var mov = "<%- theme.bg_video.name %>".split(",")
   var movIndex = Math.floor(Math.random()*mov.length);
   var _movinfo;
-  var Poi = {"pjax":"<%- theme.pjax %>","movies":{"url": "<%- theme.bg_movies.url %>","name": mov[movIndex],"live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var bgVideo = videojs('bgvideo')
+  var Poi = {"pjax":"<%- theme.pjax %>","movies":{"url": "<%- theme.bg_video.url %>","name": mov[movIndex],"live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 } else {
-  var mov = "<%- theme.bg_movies.name %>".split(",")
+  var mov = "<%- theme.bg_video.name %>".split(",")
   var movIndex = Math.floor(Math.random()*mov.length);
-  var Poi = {"pjax":"<%- theme.pjax %>","movies":{"url": "<%- theme.bg_movies.url %>","name": mov[movIndex],"live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var _movinfo;
+  var bgVideo = videojs('bgvideo')
+  var Poi = {"pjax":"<%- theme.pjax %>","movies":{"url": "<%- theme.bg_video.url %>","name": mov[movIndex],"live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 }
 /* ]]> */
 

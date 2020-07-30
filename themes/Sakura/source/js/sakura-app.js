@@ -1187,21 +1187,28 @@ var home = location.href,
       $('.video-stu').html('正在载入视频 ...').css({
         'bottom': '0px'
       })
-      var t = Poi.movies.name.split(','),_t;
+      $('#bgvideo').attr('visibility', 'visible')
+      let t=Poi.movies.name.split(','),_t,v_url;
       //随机播放视频，重新播放当前视频，而不是播放初始化视频
       if(_movinfo){
-        _t = mov[_movinfo]
+        _t = mov[movIndex]
       }else{
         _t = t[Math.floor(Math.random() * t.length)]
       }
-      console.log(_t,Poi.movies.url)
-      $('#bgvideo').attr('src', Poi.movies.url + '/' + _t)
-      $('#bgvideo').attr('video-name', _t)
+      v_url = Poi.movies.url + _t + '/video.m3u8'
+      console.log(v_url)
+      bgVideo.src({
+        src: v_url,
+        type: 'application/x-mpegURL' //在重新添加视频源的时候需要给新的type的值
+      })
     }, randomsource: function() { //随机播放
       _movinfo = Math.floor(Math.random()*mov.length)
       var _m = mov[_movinfo];
-      $('#bgvideo').attr('src', Poi.movies.url + '/' + _m)
-      $('#bgvideo').attr('video-name', _m)
+      bgVideo.src({
+        src: Poi.movies.url + _m + '/video.m3u8',
+        type: 'application/x-mpegURL' //在重新添加视频源的时候需要给新的type的值
+      })
+      bgVideo.play()
     },LV: function () {
       var _btn = $('#video-btn')
       _btn.on('click', function () {
@@ -1209,6 +1216,7 @@ var home = location.href,
           $(this).addClass('video-pause').removeClass('loadvideo').hide()
           Siren.addsource()
           s.oncanplay = function () {
+            bgVideo.play()
             Siren.splay()
             $('#video-add').show()
             $('#video-random').show()
@@ -1228,7 +1236,6 @@ var home = location.href,
           }
         }
         s.onended = function () {
-          $('#bgvideo').attr('src', '')
           $('#video-add').hide()
           $('#video-random').hide()
           _btn.addClass('loadvideo').removeClass('video-pause')
