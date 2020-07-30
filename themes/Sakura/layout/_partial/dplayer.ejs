@@ -1,10 +1,10 @@
 <% if (theme.dplayer && theme.dplayer.enable){ %>
   <div id="dplayer"></div>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script src="https://cdn.jsdelivr.net/gh/MoePlayer/DPlayer@master/dist/DPlayer.min.js"></script> 
+  <script src="<%- theme.CDN.hls %>"></script>
+  <script src="<%- theme.CDN.dplayer %>"></script> 
   <script>
     const _list = JSON.parse('<%- JSON.stringify(theme.dplayer.playlist) %>');
-    const _link = `<%- theme.CDN.default %>/video/bg_video/有一种感情叫兄弟情深`
+    const _link = `<%- theme.CDN.default %>/video/${_list.Movie[0].video.class}/${_list.Movie[0].video.title}`
     // console.log(_list,_list.Movie,`${_link}/pic.jpg`)
     const dp = new DPlayer({
         container: document.getElementById('dplayer'),
@@ -20,7 +20,7 @@
         mutex: '<%- theme.dplayer.mutex %>',
         video: {
           url: `${_link}/video.m3u8`,
-          // pic: `${_link}/pic.jpg`,
+          pic: `${_link}/pic.jpg`,
           type: 'customHls',
           customType: {
             customHls: function (video, player) {

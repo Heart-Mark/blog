@@ -169,17 +169,18 @@ donate:
   wechat: /img/custom/donate/WeChanQR.jpg
   wechatSQ: /img/custom/donate/WeChanSQ.jpg
 
-#movie
-bg_movies:
-  url:  https://cdn.jsdelivr.net/gh/Heart-Mark/assets@master/assets/video/bg_video/好想爱这个世界
+#video
+bg_video:
+  enable: true
+  url:  https://cdn.jsdelivr.net/gh/Heart-Mark/assets@master/assets/video/bg_video/
     # - ../movies/有一种夏天叫宫崎骏的夏天.mp4
   # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
   name: 
-    # - 有一种夏天叫宫崎骏的夏天.mp4
-    # - 有一种爱情叫忘机无羡.mp4
-    # - 有一种感情叫兄弟情深.mp4
-    # - 无论你在世界上的什么地方，我都一定会再去见你.mp4
-    - video.m3u8
+    - 有一种夏天叫宫崎骏的夏天
+    - 有一种爱情叫忘机无羡
+    - 有一种感情叫兄弟情深
+    - 无论你在世界上的什么地方，我都一定会再去见你
+    - 好想爱这个世界
 
 #live2d 看板娘
 live2d:
@@ -265,3 +266,17 @@ CDN:
   live2d_piocss: https://cdn.jsdelivr.net/gh/Heart-Mark/live2d@1.01/pio.css
   live2d_piojs: https://cdn.jsdelivr.net/gh/Heart-Mark/live2d@1.01/pio.js
   live2d_model: https://cdn.jsdelivr.net/gh/Heart-Mark/live2d@master/models
+
+  #aplayer
+  aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+  aplayer_css: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+  meting: https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js
+
+  #dplayer
+  dplayer: https://cdn.jsdelivr.net/gh/MoePlayer/DPlayer@master/dist/DPlayer.min.js
+  hls: https://cdn.jsdelivr.net/npm/hls.js@latest
+
+  #video
+  video: https://unpkg.com/video.js/dist/video.min.js
+  video_css: https://unpkg.com/video.js/dist/video-js.min.css
+  video_contrib_hls: https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.js
