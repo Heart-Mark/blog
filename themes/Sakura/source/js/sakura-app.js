@@ -1187,7 +1187,8 @@ var home = location.href,
       $('.video-stu').html('正在载入视频 ...').css({
         'bottom': '0px'
       })
-      $('#bgvideo').attr('visibility', 'visible')
+      $('#bgvideo').css('visibility', 'visible')
+      $('#bgvideo video').css('visibility', 'visible')
       let t=Poi.movies.name.split(','),_t,v_url;
       //随机播放视频，重新播放当前视频，而不是播放初始化视频
       if(_movinfo){
