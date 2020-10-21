@@ -1,11 +1,11 @@
 ---
-layout: bangumi
-title: bangumi
+layout: anime
+title: anime
 comments: false
 date: 2019-02-10 21:32:48
 keywords:
 description:
-bangumis:
+anime:
   - img: https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg
     title: 朝花夕誓——于离别之朝束起约定之花
     status: 已追完

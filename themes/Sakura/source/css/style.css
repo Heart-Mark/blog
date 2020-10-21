@@ -1445,7 +1445,7 @@ a:hover,a:active {
 .site-top .lower {
     display:inline-block;
     margin:15px 0 0 10px;
-    font-size:14px;
+    font-size:16px;
     position:relative;
     left:-50%;
     pointer-events:auto !important
