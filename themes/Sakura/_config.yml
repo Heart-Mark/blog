@@ -20,35 +20,25 @@ menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
   技术: { path: /tec, fa: fa-code-fork faa-vertical,
     submenus: { 
-      技术 · 编程: { path: /tec/technology_code, fa: fa-code },
-      技术 · 软件: { path: /tec/technology_software, fa: fa-th-large }, 
-      技术 · 杂谈: { path: /tec/technology_other, fa: fa-book }, 
+      技术 · 编程: { path: /tec/code, fa: fa-code },
+      技术 · 软件: { path: /tec/software, fa: fa-th-large }, 
+      技术 · 杂谈: { path: /tec/other, fa: fa-book }, 
     },
   }
   随笔: { path: /essay, fa: fa-pencil faa-shake,
     submenus: { 
-      随笔 · 日常: { path: /essay/essay_day, fa: fa-sun-o },
-      随笔 · 动漫: { path: /essay/essay_anime, fa: fa-film faa-vertical }, 
-      随笔 · 游戏: { path: /essay/essay_game, fa: fa-gamepad }, 
-      随笔 · 杂谈: { path: /essay/essay_other, fa: fa-gift }, 
+      随笔 · 日常: { path: /essay/daily, fa: fa-sun-o },
+      随笔 · 动漫: { path: /essay/anime, fa: fa-film faa-vertical }, 
+      随笔 · 游戏: { path: /essay/game, fa: fa-gamepad }, 
+      随笔 · 杂谈: { path: /essay/other, fa: fa-gift }, 
     },
   }
   归档: { path: /archives, fa: fa-archive faa-shake, 
     submenus: { 
-      技术: {path: /categories/技术/, fa: fa-code }, 
-      电影 🎬: {path: /movie, fa: fa-file-text-o }, 
-      番剧 🐱: {path: /amine, fa: fa-cloud-download }, 
-      游戏 🎮: {path: /game, fa: fa-commenting-o },
-      歌单 🎵: {path: /music, fa: fa-book },
-      书单 📖: {path: /tags/悦读/, fa: fa-th-list faa-bounce },
-    } 
-  }
-  清单: { path: javascript:;, fa: fa-list-ul faa-vertical, 
-    submenus: { 
-      书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }, 
-      番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
-      歌单: {path: /music/, fa: fa-headphones },
-      图集: {path: /tags/图集/, fa: fa-photo }
+      电影 🎬: { path: /movie, fa: fa fa-video-camera }, 
+      番组 🐱: { path: /anime, fa: fa-film faa-vertical }, 
+      游戏 🎮: { path: /game, fa: fa fa-gamepad },
+      歌单 🎵: { path: /music, fa: fa-headphones },
     } 
   }
   留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
