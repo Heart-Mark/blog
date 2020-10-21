@@ -5,12 +5,11 @@ avatar: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg
 authorLink: hojun.cn
 authorAbout: 一个好奇的人
 authorDesc: 一个好奇的人
-tec: 技术 · 编程
 date: 2018-12-12 22:16:01
 comments: true
 tags: 
- - web
- - 悦读
+ - software
+ - other
 keywords: Sakura
 description: hexo-sakura主题使用教程
 photos: https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png

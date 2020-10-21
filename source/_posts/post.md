@@ -1,19 +1,20 @@
 ---
-layout: tec
-title: 技术 · 编程
+title: 安装Vue教程
 avatar: /images/author.gif
 comments: true
 author: Hesperus｜Venus
-categories: 技术
+essay: 随笔 · 日常
+categories: daily
 cover: 'http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg'
 photos: 'http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg'
 date: 2020-07-20 15:29:01
 authorLink: hehuadong.cn
 authorAbout: 钻研vue的人
 authorDesc: 钻研vue的人
+tec: 技术 · 编程
 tags:
-  - 技术
-keywords: 技术 · 编程
+  - code
+keywords: vue
 description: 安装Vue教程
 ---
 
